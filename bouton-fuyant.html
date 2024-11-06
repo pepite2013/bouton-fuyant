@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Fuyant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="fuyant-btn">clique moi desus !</button>
+    <script>
+    const button = document.getElementById('fuyant-btn');
+
+        button.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - button.clientWidth);
+            const y = Math.random() * (window.innerHeight - button.clientHeight);
+        
+            button.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        </script>
+</body>
+</html>
